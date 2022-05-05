@@ -1,9 +1,11 @@
 from numbers import Number
 from typing import Tuple
 from termcolor import colored
-
+import numpy as np
 
 # Находим те индексы которые относятся к базису ([0, 0, 1, 1, 1] -> [2, 3, 4])
+
+
 def calc_basis_indexes(basis: list) -> list:
     return list(filter(lambda x: x != -1, map(lambda x: x if basis[x] else -1, range(len(basis)))))
 
